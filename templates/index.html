@@ -1,0 +1,40 @@
+{% extends "base.html"%}
+
+{% block title %}
+Отчет УПешки
+{% endblock %}
+
+{% block table%}
+
+<table class ="table_main">
+    <tr>
+
+        <th>имя</th>
+        <th>деталь</th>
+        <th>дата</th>
+
+    </tr>
+    {% for i in table_info%}
+
+    <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}} </td>
+        <td>{{i[2]}}</td>
+  </tr>
+{% endfor %}
+</table>
+<form method="post" >
+<div>
+        <a>
+    <input type="text" class="input_field" name = "names">
+        </a>
+        <a>
+    <input type="text" class="input_field" name = "part">
+        </a>
+        <a>
+    <input type="text" class="input_field" name = "date">
+        </a>
+</div>
+<input type="submit" class="sub_button" name = "sub_button">
+</form>
+{% endblock %}
